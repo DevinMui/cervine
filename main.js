@@ -1,55 +1,30 @@
-// Modules to control application life and create native browser window
-const { app, BrowserWindow, systemPreferences } = require('electron')
-const path = require('path')
+const { app, BrowserWindow, Menu, systemPreferences } = require('electron')
+const template = require(__dirname + '/menu.js')
+const theme = require(__dirname + '/theme.js')
+const store = require(__dirname + '/store.js')
 const fs = require('fs')
 
 let mainWindow
+let menu
+
 const BASE_URL = 'https://www.instagram.com'
-
-function changeTheme() {
-    if (!mainWindow || !mainWindow.webContents) return
-
-    if (systemPreferences.isDarkMode()) {
-        fs.readFile(__dirname + '/styles/dark.css', 'utf-8', function(
-            err,
-            style
-        ) {
-            if (err) {
-                console.log(err)
-            }
-
-            style = style.replace(/\s{2,10}/g, ' ').trim()
-            mainWindow.webContents.insertCSS(style)
-        })
-    } else {
-        // refresh once
-        // mainWindow.webContents.reload()
-    }
-}
-
-function changeThemeJs() {
-    if (!mainWindow || !mainWindow.webContents) return
-
-    if (systemPreferences.isDarkMode()) {
-        fs.readFile(__dirname + '/js/dark.js', 'utf-8', function(err, js) {
-            if (err) console.log(err)
-            mainWindow.webContents.executeJavaScript(js)
-        })
-    }
-}
 
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
-        height: 1000,
-        webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
-        }
+        height: 800
     })
 
+    menu = Menu.buildFromTemplate(template)
+    Menu.setApplicationMenu(menu)
+
     mainWindow.webContents.on('did-navigate-in-page', function(event, url) {
-        changeTheme()
-        changeThemeJs()
+        if (
+            store.get('theme') === 'dark' ||
+            (store.get('theme') === 'system' && systemPreferences.isDarkMode())
+        )
+            theme.setDark(mainWindow)
+
         // intercept ENTER keypress to press Send button in chat
         if (url.startsWith(BASE_URL + '/direct/t')) {
             fs.readFile(__dirname + '/js/enter.js', 'utf-8', function(err, js) {
@@ -70,13 +45,21 @@ function createWindow() {
     })
 
     // autoupdate on system change
-    // systemPreferences.subscribeNotification(
-    //     'AppleInterfaceThemeChangedNotification',
-    //     () => {
-    //         changeTheme()
-    //         changeThemeJs()
-    //     }
-    // )
+    // from experimentation, isDarkMode() does not work on windows
+    if (process.platform === 'darwin') {
+        systemPreferences.subscribeNotification(
+            'AppleInterfaceThemeChangedNotification',
+            () => {
+                if (
+                    store.get('theme') === 'dark' ||
+                    (store.get('theme') === 'system' &&
+                        systemPreferences.isDarkMode())
+                )
+                    theme.setDark(mainWindow)
+                else mainWindow.webContents.reload()
+            }
+        )
+    }
 }
 
 app.on('ready', createWindow)

@@ -19,6 +19,7 @@
         "electron-packager": "^14.0.6"
     },
     "dependencies": {
+        "electron-store": "^5.0.0",
         "fs": "0.0.1-security"
     }
 }
