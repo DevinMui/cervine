@@ -22,7 +22,8 @@ function changeTheme() {
             mainWindow.webContents.insertCSS(style)
         })
     } else {
-        mainWindow.webContents.reload()
+        // refresh once
+        // mainWindow.webContents.reload()
     }
 }
 
@@ -68,13 +69,14 @@ function createWindow() {
         mainWindow = null
     })
 
-    systemPreferences.subscribeNotification(
-        'AppleInterfaceThemeChangedNotification',
-        () => {
-            changeTheme()
-            changeThemeJs()
-        }
-    )
+    // autoupdate on system change
+    // systemPreferences.subscribeNotification(
+    //     'AppleInterfaceThemeChangedNotification',
+    //     () => {
+    //         changeTheme()
+    //         changeThemeJs()
+    //     }
+    // )
 }
 
 app.on('ready', createWindow)

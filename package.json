@@ -1,18 +1,24 @@
 {
-  "name": "instagram",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^6.0.12"
-  },
-  "dependencies": {
-    "fs": "0.0.1-security"
-  }
+    "name": "Cervine",
+    "version": "0.0.1",
+    "description": "Cervine is an unofficial Instagram Direct desktop app.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "pack:osx": "electron-packager . $npm_package_name --overwrite --out=release-builds --platform=darwin --arch=x64 --icon=icon/logo.icns --asar",
+        "pack:win32": "electron-packager . $npm_package_name --overwrite --out=release-builds --platform=win32 --arch=ia32 app-version=$npm_package_version --icon=icon/logo.ico --asar",
+        "pack:win64": "electron-packager . $npm_package_name --overwrite --out=release-builds --platform=win32 --arch=x64 app-version=$npm_package_version --icon=icon/logo.ico --asar",
+        "pack:linux": "electron-packager . $npm_package_name --overwrite --out=release-builds --platform=linux --arch=ia32,x64 app-version=$npm_package_version --icon=icon/logo.png --asar",
+        "dist": "npm run pack:osx && npm run pack:win32 && npm run pack:win64 && npm run pack:linux"
+    },
+    "keywords": [],
+    "author": "Devin Mui",
+    "license": "BSD 3-Clause",
+    "devDependencies": {
+        "electron": "^6.0.12",
+        "electron-packager": "^14.0.6"
+    },
+    "dependencies": {
+        "fs": "0.0.1-security"
+    }
 }
