@@ -52,7 +52,7 @@ Replace `<target>` with `osx`, `linux`, `win32`, or `win`.
 
 ### Contribute
 
-To contribute to Cervine, clone the repository
+To contribute to Cervine, clone your fork of Cervine
 
 `$ git clone https://github.com/DevinMui/cervine`
 
@@ -63,6 +63,8 @@ Install necessary packages
 And run the application
 
 `$ npm start`
+
+When you have finished with your edits, feel free to create a pull request!
 
 ### Disclaimer
 
