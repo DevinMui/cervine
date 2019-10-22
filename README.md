@@ -26,7 +26,7 @@ _Cervine offers a dark mode_
 
 _macOS 10.10+, Linux, and Windows 7+ are supported (64-bit only)._
 
-To install, just download the [latest release package](https://github.com/DevinMui/cervine/releases/tag/0.0.1).
+To install, just download the [latest release package](https://github.com/DevinMui/cervine/releases/).
 
 **OR**
 
