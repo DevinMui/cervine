@@ -96,9 +96,8 @@ const template = [
                     }
                 ]
             },
+            { type: 'separator' },
             { role: 'reload' },
-            { role: 'forcereload' },
-            { role: 'toggledevtools' },
             { type: 'separator' },
             { role: 'resetzoom' },
             { role: 'zoomin' },

@@ -9,6 +9,10 @@ let menu
 
 const BASE_URL = 'https://www.instagram.com'
 
+app.setAboutPanelOptions({
+    copyright: 'Copyright \u00A9 2019 Devin Mui',
+    website: 'https://github.com/DevinMui/cervine'
+})
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
@@ -26,17 +30,15 @@ function createWindow() {
             theme.setDark(mainWindow)
 
         // intercept ENTER keypress to press Send button in chat
-        if (url.startsWith(BASE_URL + '/direct/t')) {
-            fs.readFile(__dirname + '/js/enter.js', 'utf-8', function(err, js) {
-                mainWindow.webContents.executeJavaScript(js)
-            })
-        }
+        fs.readFile(__dirname + '/js/enter.js', 'utf-8', function(err, js) {
+            mainWindow.webContents.executeJavaScript(js)
+        })
     })
 
     // force instagram to be in mobile
     let userAgent =
         'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like G    ecko) Chrome/77.0.3865.120 Mobile Safari/537.36'
-    mainWindow.loadURL(BASE_URL + '/direct/inbox', { userAgent: userAgent })
+    mainWindow.loadURL(BASE_URL, { userAgent: userAgent })
 
     // mainWindow.webContents.openDevTools()
 
@@ -50,10 +52,11 @@ function createWindow() {
         systemPreferences.subscribeNotification(
             'AppleInterfaceThemeChangedNotification',
             () => {
+                if (store.get('theme') !== 'system') return
+
                 if (
-                    store.get('theme') === 'dark' ||
-                    (store.get('theme') === 'system' &&
-                        systemPreferences.isDarkMode())
+                    store.get('theme') === 'system' &&
+                    systemPreferences.isDarkMode()
                 )
                     theme.setDark(mainWindow)
                 else mainWindow.webContents.reload()
