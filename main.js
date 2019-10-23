@@ -9,10 +9,13 @@ let menu
 
 const BASE_URL = 'https://www.instagram.com'
 
-app.setAboutPanelOptions({
-    copyright: 'Copyright \u00A9 2019 Devin Mui',
-    website: 'https://github.com/DevinMui/cervine'
-})
+if (process.platform !== 'win32') {
+    app.setAboutPanelOptions({
+        copyright: 'Copyright \u00A9 2019 Devin Mui',
+        website: 'https://github.com/DevinMui/cervine'
+    })
+}
+
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
