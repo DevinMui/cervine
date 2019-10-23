@@ -12,14 +12,14 @@ const BASE_URL = 'https://www.instagram.com'
 if (process.platform !== 'win32') {
     app.setAboutPanelOptions({
         copyright: 'Copyright \u00A9 2019 Devin Mui',
-        website: 'https://github.com/DevinMui/cervine'
+        website: 'https://github.com/DevinMui/cervine',
     })
 }
 
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
-        height: 800
+        height: 800,
     })
 
     menu = Menu.buildFromTemplate(template)

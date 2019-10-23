@@ -2,7 +2,11 @@ env:
   browser: true
   es6: true
   node: true
-extends: 'eslint:recommended'
+extends:
+    - 'eslint:recommended'
+    - 'prettier'
+plugins:
+    - 'prettier'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
@@ -10,9 +14,9 @@ parserOptions:
   ecmaVersion: 2018
   sourceType: module
 rules:
-  indent:
+  prettier/prettier: 
     - error
-    - 4
+  no-unused-vars: warn
   linebreak-style:
     - error
     - unix

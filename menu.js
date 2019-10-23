@@ -17,14 +17,14 @@ const template = [
                       { role: 'hideothers' },
                       { role: 'unhide' },
                       { type: 'separator' },
-                      { role: 'quit' }
-                  ]
-              }
+                      { role: 'quit' },
+                  ],
+              },
           ]
         : []),
     {
         label: 'File',
-        submenu: [isMac ? { role: 'close' } : { role: 'quit' }]
+        submenu: [isMac ? { role: 'close' } : { role: 'quit' }],
     },
     {
         label: 'Edit',
@@ -45,16 +45,16 @@ const template = [
                           label: 'Speech',
                           submenu: [
                               { role: 'startspeaking' },
-                              { role: 'stopspeaking' }
-                          ]
-                      }
+                              { role: 'stopspeaking' },
+                          ],
+                      },
                   ]
                 : [
                       { role: 'delete' },
                       { type: 'separator' },
-                      { role: 'selectAll' }
-                  ])
-        ]
+                      { role: 'selectAll' },
+                  ]),
+        ],
     },
     {
         label: 'View',
@@ -72,7 +72,7 @@ const template = [
                             systemPreferences.isDarkMode()
                                 ? theme.setDark(window)
                                 : window.webContents.reload()
-                        }
+                        },
                     },
                     {
                         label: 'Light',
@@ -82,7 +82,7 @@ const template = [
                             if (store.get('theme') === 'light') return
                             store.set('theme', 'light')
                             window.webContents.reload()
-                        }
+                        },
                     },
                     {
                         label: 'Dark',
@@ -92,9 +92,9 @@ const template = [
                             if (store.get('theme') === 'dark') return
                             store.set('theme', 'dark')
                             theme.setDark(window)
-                        }
-                    }
-                ]
+                        },
+                    },
+                ],
             },
             { type: 'separator' },
             { role: 'reload' },
@@ -103,8 +103,8 @@ const template = [
             { role: 'zoomin' },
             { role: 'zoomout' },
             { type: 'separator' },
-            { role: 'togglefullscreen' }
-        ]
+            { role: 'togglefullscreen' },
+        ],
     },
     {
         label: 'Window',
@@ -116,10 +116,10 @@ const template = [
                       { type: 'separator' },
                       { role: 'front' },
                       { type: 'separator' },
-                      { role: 'window' }
+                      { role: 'window' },
                   ]
-                : [{ role: 'close' }])
-        ]
+                : [{ role: 'close' }]),
+        ],
     },
     {
         role: 'help',
@@ -131,10 +131,10 @@ const template = [
                     await shell.openExternal(
                         'https://github.com/DevinMui/cervine'
                     )
-                }
-            }
-        ]
-    }
+                },
+            },
+        ],
+    },
 ]
 
 module.exports = template

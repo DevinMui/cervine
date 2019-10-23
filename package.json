@@ -16,7 +16,11 @@
     "license": "BSD 3-Clause",
     "devDependencies": {
         "electron": "^6.0.12",
-        "electron-packager": "^14.0.6"
+        "electron-packager": "^14.0.6",
+        "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "prettier": "^1.18.2"
     },
     "dependencies": {
         "electron-store": "^5.0.0",
