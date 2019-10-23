@@ -13,6 +13,30 @@ module.exports = {
             .then(style => {
                 style = style.replace(/\s{2,10}/g, ' ').trim()
                 mainWindow.webContents.insertCSS(style)
+                return fs.readFile(
+                    __dirname + '/styles/dark/search.css',
+                    'utf-8'
+                )
+            })
+            .then(style => {
+                style = style.replace(/\s{2,10}/g, ' ').trim()
+                mainWindow.webContents.insertCSS(style)
+                return fs.readFile(
+                    __dirname + '/styles/dark/activity.css',
+                    'utf-8'
+                )
+            })
+            .then(style => {
+                style = style.replace(/\s{2,10}/g, ' ').trim()
+                mainWindow.webContents.insertCSS(style)
+                return fs.readFile(
+                    __dirname + '/styles/dark/profile.css',
+                    'utf-8'
+                )
+            })
+            .then(style => {
+                style = style.replace(/\s{2,10}/g, ' ').trim()
+                mainWindow.webContents.insertCSS(style)
             })
             .catch(err => {
                 console.log(err)

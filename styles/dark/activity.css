@@ -1,0 +1,33 @@
+/* Text Styles */
+.BcJ68,
+.yrJyr,
+.yrJyr:visited,
+.YFq-A {
+    color: #fff !important;
+}
+
+/* List */
+.PUHRj::after {
+    border-color: rgb(26, 26, 26, 1) !important;
+}
+
+/* Follow Requests */
+.sDN5V {
+    --b3f: 0, 0, 0 !important;
+    --b38: 26, 26, 26 !important;
+}
+
+/* Follow Requests Icon */
+.-wdIA {
+    border-color: #fff !important;
+}
+
+span[class^='loggedoutSprite'],
+span[class*='loggedoutSprite'] {
+    filter: brightness(1000%);
+}
+
+/* Follow Requests Background */
+.dL3lC {
+    background-color: #000 !important;
+}
