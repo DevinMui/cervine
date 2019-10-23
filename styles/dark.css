@@ -1,75 +1,31 @@
-body {
+/* Override CSS variables */
+.sDN5V {
+    /* IDK: Text color */
+    --i1d: 255, 255, 255 !important;
+    --d20: 255, 255, 255 !important;
+    --f07: 255, 255, 255 !important;
+
+    /* All: Background color */
+    --cdc: 0, 0, 0 !important;
+
+    /* All: Back Button Icon */
+    --fe0: 255, 255, 255 !important;
+
+    /* Message View: User Message Background Color */
+    --c90: 38, 38, 38 !important;
+
+    /* New Message: User Button Background */
+    --fa7: 10, 38, 71 !important;
+
+    /* New Message: User Button Text */
+    --h5f: 74, 140, 218 !important;
 }
 
-main.SCxLW.o64aR {
-    background-color: #1a1a1a;
+/* Glyphs/Icons */
+span[class^='glyphsSprite'], span[class*=' glyphsSprite'] {
+    /* Since they are PNG, can't set color, instead increase brightness so it looks white */
+    filter: brightness(1000%);
 }
-
-div._lz6s {
-    background-color: #000000;
+svg {
+    fill: white !important;
 }
-
-div.b5itu {
-    background-color: #000000;
-}
-
-div.Igw0E.rBNOH.eGOV_.ybXk5._4EzTm.XfCBB.HVWg4 {
-    background-color: #030303;
-}
-
-div.N9abW {
-    background-color: #000000;
-}
-
-div._7UhW9.xLCgt.MMzan.KV-D4.uL8Hv {
-    color: #ffffff;
-}
-
-div.frMpI {
-    background-color: #000000;
-}
-
-div.Igw0E.IwRSH.eGOV_._4EzTm.XfCBB.g6RW6 {
-    background-color: #000000;
-}
-
-div._7UhW9.vy6Bb.qyrsm.KV-D4.fDxYl {
-    color: #ffffff;
-}
-
-div.Igw0E._56XdI.eGOV_.vwCYk.n4cjz {
-    color: #ffffff;
-}
-
-div.mXkkY.KDuQp {
-    color: #ffffff;
-}
-
-div.X3a-9 {
-    border-color: #fff;
-}
-
-div.Igw0E.IwRSH.YBx95._4EzTm.XfCBB.g6RW6 {
-    background-color: #ffffff;
-}
-
-div.b5itu.eerSz {
-    border-color: black;
-}
-
-svg._8-yf5 {
-    color: #ffffff;
-}
-
-h1.K3Sf1 {
-    color: #ffffff;
-}
-
-div.Igw0E.IwRSH.eGOV_.vwCYk.ItkAi textarea {
-    color: #ffffff;
-}
-
-div.Igw0E.IwRSH.hLiUi.vwCYk {
-    background-color: #000;
-}
-
