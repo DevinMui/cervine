@@ -35,7 +35,7 @@ _Cervine mimics the dark mode on Instagram's mobile app_
 
 _macOS 10.10+, Linux, and Windows 7+ are supported (64-bit only)._
 
-To install, just download the [latest release package](https://github.com/DevinMui/cervine/releases/).
+To install, just download the [latest release package](https://github.com/DevinMui/cervine/releases/latest).
 
 **OR**
 
