@@ -1,26 +1,35 @@
 # Cervine
 
-> Instagram Direct desktop app
+> An Instagram desktop app featuring dark mode powered by [Electron](https://electronjs.org)
 
-Cervine is an unofficial Instagram Direct desktop app.
+Cervine is an unofficial Instagram desktop app for those of us who got tired of waiting for a desktop experience.
 
-![cervine screenshot](./media/screenshot.png)
-
-_currently in development_
+![cervine screenshot](./media/animate.gif)
 
 ## About
 
-Cervine is an unofficial Instagram Direct desktop application that supports a dark mode among other future features. Cervine was born out of my frustration of not being able to respond to people on Instagram quickly.
+Cervine is an unofficial Instagram desktop application that supports a dark mode among other future features. Cervine was born out of my frustration of not being able to respond to people on Instagram quickly.
 
 **Why**
 
 [IG:dm](https://igdm.me/) exists but uses Instagram's private API to receive and respond to messages. I found the application slow and somewhat buggy (the UI would sometimes bug out and you could send the wrong person a message).
 
-Cervine **does not use** Instagram's private API. Rather, it simply uses the Instagram website to send/receive messages. This makes it snappy and quick without having to create a brand new UI. To make dark mode, the application simply needs to inject some CSS and JS into the webpage.
+Cervine **does not use** Instagram's private API. Rather, it simply uses the Instagram website to send/receive messages. This makes it snappy and quick without having to create a brand new UI. To make dark mode, the application simply overrides Instagram's CSS styles.
+
+**Features**
+
+-   [x] Look at posts
+-   [x] Post pictures
+-   [x] Search for people
+-   [x] Follow people
+-   [x] View stories
+-   [x] Send/receive messages in real time
+-   [x] Cross-platform
+-   [x] **_d a r k m o d e_**
 
 ![dark mode](./media/dark.png)
 
-_Cervine offers a dark mode_
+_Cervine mimics the dark mode on Instagram's mobile app_
 
 ### Install
 
