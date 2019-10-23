@@ -1,0 +1,84 @@
+/* This overrides the homepage styles only */
+
+/* Text styles */
+.TlrDj,
+.TlrDj:visited,
+.zV_Nj,
+.zV_Nj:visited,
+.nJAzx,
+.nJAzx:visited,
+a.O4GlU,
+a.O4GlU:visited,
+.XdXBI,
+.cqXBL,
+.cqXBL:visited,
+.y9v3U {
+    color: #fff !important;
+}
+
+/* Options Text */
+.HoLwm {
+    color: #262625 !important;
+}
+
+/* Stories */
+.zGtbP {
+    background-color: #000 !important;
+    border-bottom-color: rgb(9, 9, 9) !important;
+}
+
+.IPQK5 {
+    border-color: rgb(26, 26, 26, 1) !important;
+}
+
+/* Images Border */
+.KOa7C,
+.UE9AK {
+    border-bottom-color: #000 !important;
+}
+
+/* Bottom Navbar */
+.KGiwt {
+    background-color: rgb(26, 26, 26, 1) !important;
+}
+
+/* Comments */
+.sH9wk {
+    border-color: rgb(26, 26, 26, 1) !important;
+}
+
+.n1LTb .RxpZH {
+    background-color: rgb(26, 26, 26, 1) !important;
+    border-color: rgb(26, 26, 26, 1) !important;
+}
+
+._1LqHP {
+    border-color: #000 !important;
+}
+
+.up_hg {
+    background-color: #1e88e5 !important;
+    border-color: #000 !important;
+}
+
+.sH9wk {
+    color: #fff !important;
+}
+
+/* Responsive */
+.AcVnq,
+.KQA-S,
+._1MzIy,
+._3MPWk,
+._8Rm4L,
+.zMhqu {
+    background-color: #000 !important;
+}
+
+.KQA-S,
+._1MzIy,
+._3MPWk,
+._8Rm4L,
+.zMhqu {
+    border-color: rgb(26, 26, 26, 1) !important;
+}

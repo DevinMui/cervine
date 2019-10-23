@@ -107,7 +107,6 @@ const template = [
             { role: 'togglefullscreen' }
         ]
     },
-    // { role: 'windowMenu' }
     {
         label: 'Window',
         submenu: [

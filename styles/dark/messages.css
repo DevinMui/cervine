@@ -8,6 +8,9 @@
     /* All: Background color */
     --cdc: 0, 0, 0 !important;
 
+    /* Header line color */
+    --b6a: 26, 26, 26 !important;
+
     /* All: Back Button Icon */
     --fe0: 255, 255, 255 !important;
 
@@ -21,11 +24,19 @@
     --h5f: 74, 140, 218 !important;
 }
 
-/* Glyphs/Icons */
-span[class^='glyphsSprite'], span[class*=' glyphsSprite'] {
+/* Overwrite header color */
+._9ezyW {
+    background-color: rgb(26, 26, 26, 1) !important;
+}
+
+/* Glyphs/Icons + IG logo */
+img.s4Iyt,
+span[class^='glyphsSprite'],
+span[class*=' glyphsSprite'] {
     /* Since they are PNG, can't set color, instead increase brightness so it looks white */
     filter: brightness(1000%);
 }
 svg {
     fill: white !important;
 }
+
