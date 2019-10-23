@@ -1,6 +1,6 @@
 {
     "name": "Cervine",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "description": "Cervine is an unofficial Instagram Direct desktop app.",
     "main": "main.js",
     "scripts": {
