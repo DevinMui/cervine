@@ -12,13 +12,8 @@ module.exports = {
                 console.log(err)
             }
 
-            fs.readFile(__dirname + '/js/dark.js', 'utf-8', function(err, js) {
-                if (err) console.log(err)
-
-                style = style.replace(/\s{2,10}/g, ' ').trim()
-                mainWindow.webContents.insertCSS(style)
-                mainWindow.webContents.executeJavaScript(js)
-            })
+            style = style.replace(/\s{2,10}/g, ' ').trim()
+            mainWindow.webContents.insertCSS(style)
         })
     }
 }
