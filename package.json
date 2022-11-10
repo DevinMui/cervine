@@ -15,7 +15,7 @@
     "author": "Devin Mui",
     "license": "BSD 3-Clause",
     "devDependencies": {
-        "electron": "^6.0.12",
+        "electron": "^18.3.7",
         "electron-packager": "^14.0.6",
         "eslint": "^6.5.1",
         "eslint-config-prettier": "^6.4.0",
